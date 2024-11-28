@@ -8,42 +8,36 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Quiz!</h1>
-        <nav>
-            <button id="loginButton">Login</button>
-            <button id="registerButton">Register</button>
-        </nav>
+        <h1>Quiz Website</h1>
     </header>
 
     <main id="quiz-container">
-        <div id="quiz-intro">
-            <p>Test your knowledge with our 10-question quiz!</p>
-            <button id="startQuiz">Start Quiz</button>
-        </div>
+        <!-- Input for quiz topic -->
         <div id="generate-quiz-section">
-            <input type="text" id="quiz-topic" placeholder="Enter a Wikipedia topic" />
+            <input type="text" id="quiz-topic" placeholder="Enter a Wikipedia topic">
             <button id="generateQuiz">Generate Quiz</button>
         </div>
-        
+
+        <!-- Quiz intro section -->
+        <div id="quiz-intro">
+            <p>Welcome to the quiz! Click the button to start.</p>
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+
+        <!-- Quiz questions -->
         <div id="quiz-section" class="hidden">
             <div id="question-container">
                 <p id="question"></p>
-                <div id="options">
-                    <!-- Options will be injected here -->
-                </div>
+                <div id="options"></div>
             </div>
-            <div id="extended-response" class="hidden">
-                <label for="response">Explain your answer:</label>
-                <textarea id="response" rows="4" cols="50"></textarea>
-                <button id="nextQuestion">Next</button>
-            </div>
+            <button id="nextQuestion" class="hidden">Next</button>
         </div>
 
+        <!-- Results -->
         <div id="result-section" class="hidden">
             <h2>Your Results</h2>
             <p id="score"></p>
         </div>
-        <div id="loading" class="hidden">Loading your quiz...</div>
     </main>
 
     <script src="js/script.js"></script>
