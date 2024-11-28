@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const generateQuizButton = document.getElementById("generateQuiz");
-    const topicInput = document.getElementById("quiz-topic");
+    const startQuizButton = document.getElementById("startQuiz");
     const quizSection = document.getElementById("quiz-section");
     const questionContainer = document.getElementById("question-container");
     const optionsContainer = document.getElementById("options");
     const nextQuestionButton = document.getElementById("nextQuestion");
+    const resultSection = document.getElementById("result-section");
+    const scoreDisplay = document.getElementById("score");
 
     let currentQuestionIndex = 0;
     let quizData = [
@@ -18,12 +19,54 @@ document.addEventListener("DOMContentLoaded", () => {
             options: ["3", "4", "5", "6"],
             correct: "4",
         },
-        // Add more mock questions as needed
     ];
     let score = 0;
 
-    generateQuizButton.addEventListener("click", () => {
-        const topic = topicInput.value.trim();
+    // Start the quiz
+    startQuizButton.addEventListener("click", () => {
+        document.getElementById("quiz-intro").classList.add("hidden");
+        quizSection.classList.remove("hidden");
+        loadQuestion();
+    });
+
+    // Load a question
+    function loadQuestion() {
+        const currentQuestion = quizData[currentQuestionIndex];
+        questionContainer.querySelector("#question").textContent = currentQuestion.question;
+        optionsContainer.innerHTML = "";
+
+        currentQuestion.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.textContent = option;
+            button.addEventListener("click", () => selectAnswer(option));
+            optionsContainer.appendChild(button);
+        });
+
+        nextQuestionButton.classList.remove("hidden");
+    }
+
+    // Handle answer selection
+    function selectAnswer(selectedOption) {
+        const currentQuestion = quizData[currentQuestionIndex];
+        if (selectedOption === currentQuestion.correct) {
+            score++;
+        }
+        currentQuestionIndex++;
+        if (currentQuestionIndex < quizData.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    // Show the results
+    function showResults() {
+        quizSection.classList.add("hidden");
+        resultSection.classList.remove("hidden");
+        scoreDisplay.textContent = `You scored ${score} out of ${quizData.length}.`;
+    }
+});
+
         if (!topic) {
             alert("Please enter a topic.");
             return;
