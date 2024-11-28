@@ -1,0 +1,48 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6200ea;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons .btn {
+  background-color: white;
+  color: #6200ea;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #3700b3;
+  color: white;
+}
+
+.auth-buttons .login-btn {
+  background-color: white;
+}
+
+.auth-buttons .register-btn {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.auth-buttons .register-btn:hover {
+  background-color: #d76a00;
+}
