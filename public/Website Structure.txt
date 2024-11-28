@@ -1,0 +1,38 @@
+quiz-website/
+├── public/                     # Publicly accessible files
+│   ├── index.html              # Main HTML file
+│   ├── favicon.ico             # Site icon
+│   └── assets/                 # Static assets (images, fonts, etc.)
+│       ├── images/
+│       ├── fonts/
+│       └── icons/
+├── src/                        # Source code for the app
+│   ├── components/             # Reusable components (e.g., Navbar, Footer, etc.)
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── QuestionCard.js
+│   │   └── ResultPage.js
+│   ├── pages/                  # Different pages of the website
+│   │   ├── HomePage.js
+│   │   ├── QuizPage.js
+│   │   └── AdminPage.js
+│   ├── styles/                 # CSS or SCSS stylesheets
+│   │   ├── global.css
+│   │   ├── home.css
+│   │   └── quiz.css
+│   ├── services/               # API service calls or helper functions
+│   │   ├── api.js
+│   │   └── utils.js
+│   ├── state/                  # State management files
+│   │   ├── context.js          # Context API for global state
+│   │   └── reducers.js         # Reducers for managing state
+│   ├── App.js                  # Main application entry point
+│   └── index.js                # JavaScript entry point
+├── tests/                      # Unit and integration tests
+│   ├── components/             # Component-specific tests
+│   ├── pages/                  # Page-specific tests
+│   └── integration/            # Integration tests
+├── package.json                # npm dependencies and scripts
+├── .gitignore                  # Files and folders to ignore in Git
+├── README.md                   # Documentation for the project
+└── webpack.config.js           # Webpack configuration (if using)
