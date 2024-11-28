@@ -6,7 +6,7 @@
   <meta name="description" content="A fun and interactive quiz website. Test your knowledge with various quizzes!">
   <meta name="keywords" content="quiz, trivia, knowledge, fun quizzes">
   <meta name="author" content="Your Name">
-  <title>Call it 10</title>
+  <title>Quiz Website</title>
 
   <!-- Favicon -->
   <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
@@ -16,6 +16,16 @@
   <link rel="stylesheet" href="./styles/global.css">
 </head>
 <body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Quiz Website</h1>
+      <div class="auth-buttons">
+        <button class="btn login-btn" onclick="handleLogin()">Login</button>
+        <button class="btn register-btn" onclick="handleRegister()">Register</button>
+      </div>
+    </div>
+  </header>
+
   <div id="root"></div>
 
   <!-- Scripts -->
