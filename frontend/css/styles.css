@@ -13,47 +13,10 @@ header {
     padding: 1rem;
 }
 
-header h1 {
-    margin: 0;
-}
-
-nav button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    color: #6200ea;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-nav button:hover {
-    background-color: #ddd;
-}
-
-main {
-    margin: 2rem;
-}
-.hidden {
-    display: none;
-}
-
-#loading {
-    font-size: 1.5rem;
-    color: #6200ea;
-    margin: 20px;
-}
-
-#quiz-container {
-    max-width: 600px;
-    margin: auto;
-    text-align: left;
-}
-
-#options button {
-    display: block;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
     background-color: #6200ea;
     color: white;
     border: none;
@@ -61,11 +24,10 @@ main {
     cursor: pointer;
 }
 
-#options button:hover {
+button:hover {
     background-color: #3700b3;
 }
 
-textarea {
-    width: 100%;
-    margin-top: 1rem;
+.hidden {
+    display: none;
 }
